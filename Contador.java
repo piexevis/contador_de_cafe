@@ -1,7 +1,7 @@
 import javax.swing.*; // libreria para ver y crear toda la visual o interface como ustedes digan a esta mrd
 public class Contador extends JFrame { // herencia para hacer la ventana con JFrame
     private JLabel Label1, Label2; //Text 1 (pos creo que es obvio, no?), Text 2 (diversion XD) (pd2: tuve que ponerle un for para no poner tanto linea con label?)
-    private JButton Button1, Button2; // boton para aumentar el contador, reset, por si acaso supongo
+    private JButton Button1, Button2; // boton1 = para aumentar el contador, boton 2 = reset, por si acaso supongo
     private int Count = 0; // contador para el cafe
     public Contador(){
         setLayout(null);
