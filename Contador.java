@@ -1,27 +1,24 @@
 import javax.swing.*; // libreria para ver y crear toda la visual o interface como ustedes digan a esta mrd
 public class Contador extends JFrame { // herencia para hacer la ventana con JFrame
-    private JLabel Label1; //Text 1 (pos creo que es obvio, no?)
-    private JLabel Label2; //Text 2 (diversion XD) (pd2: tuve que ponerle un for para no poner tanto linea con label?)
-    private JButton Button1; // boton para aumentar el contador
-    private JButton Button2; // reset, por si acaso supongo
+    private JLabel Label1, Label2; //Text 1 (pos creo que es obvio, no?), Text 2 (diversion XD) (pd2: tuve que ponerle un for para no poner tanto linea con label?)
+    private JButton Button1, Button2; // boton para aumentar el contador, reset, por si acaso supongo
     private int Count = 0; // contador para el cafe
     public Contador(){
         setLayout(null);
+        //declaraciones
         Label1 = new JLabel("cantidad de cafe consumido " + Count); //texto 1 para llevar la cuenta :P
-        
+        Label2 = new JLabel("un cafe no te haria mal");
+        Button1 = new JButton("tomar cafe");
+        Button2 = new JButton("resetear contador");
         //posicones
         Label1.setBounds(10, 20, 200, 30);
         add(Label1);
-        Button1 = new JButton("tomar cafe");
         Button1.setBounds(10, 60, 100, 30);
         add(Button1);
-        Label2 = new JLabel("un cafe no te haria mal");
         Label2.setBounds(10, 120, 450, 30);
         add(Label2);
-        Button2 = new JButton("resetear contador");
         Button2.setBounds(120, 60, 100, 30);
         add(Button2);
-
         //acciones
         Button1.addActionListener(aument_cont -> {
             Count++; //el contrador aumenta en 1
